@@ -10,7 +10,12 @@ class EmotionTable extends React.Component {
           <table className="table table-bordered">
             <tbody>
             {
-                //Write code to use the .map method that you worked on in the Hands-on React lab to extract the emotions
+                Object.entries(this.props.emotions).map(function (eventDetails) {
+                    return (<tr>
+                        <th scope="row">{eventDetails[0]}</th>
+                        <td>{eventDetails[1]}</td>
+                    </tr>)
+                })
             }
             </tbody>
           </table>

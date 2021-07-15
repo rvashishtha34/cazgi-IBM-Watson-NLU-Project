@@ -10,6 +10,7 @@ class App extends React.Component {
           sentimentOutput:[],
           sentiment:true
         }
+    title = "Sentiment Analyzer";
   
   renderTextArea = ()=>{
     document.getElementById("textinput").value = "";
@@ -55,7 +56,7 @@ class App extends React.Component {
       } else if (response.data === "negative"){
         output = <div style={{color:"red",fontSize:20}}>{response.data}</div>
       } else {
-        output = <div style={{color:"orange",fontSize:20}}>{response.data}</div>
+        output = <div style={{color:"yellow",fontSize:20}}>{response.data}</div>
       }
       this.setState({sentimentOutput:output});
     });
